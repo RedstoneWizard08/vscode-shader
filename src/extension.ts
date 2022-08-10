@@ -9,12 +9,13 @@ import { setRgPath, setHlslExtensions } from './common'
 
 import HLSLHoverProvider from './hlsl/hoverProvider';
 import HLSLCompletionItemProvider from './hlsl/HLSLCompletionItemProvider';
-import HLSLSignatureHelpProvider from './hlsl/signatureProvider';
+import HLSLSignatureHelpProvider from './hlsl/HLSLSignatureHelpProvider';
 import HLSLSymbolProvider from './hlsl/symbolProvider';
 import HLSLDefinitionProvider from './hlsl/definitionProvider';
 import HLSLReferenceProvider from './hlsl/referenceProvider';
 import GLSLHoverProvider from './glsl/GLSLHoverProvider';
 import GLSLCompletionItemProvider from './glsl/GLSLCompletionItemProvider';
+import GLSLSignatureHelpProvider from './glsl/GLSLSignatureHelpProvider';
 
 class HLSLFormatingProvider implements vscode.DocumentFormattingEditProvider, vscode.DocumentRangeFormattingEditProvider {
 
@@ -101,6 +102,7 @@ export async function activate(context: vscode.ExtensionContext) {
     context.subscriptions.push(vscode.languages.registerCompletionItemProvider(hlslDocumentSelector, new HLSLCompletionItemProvider(), '.'));
     context.subscriptions.push(vscode.languages.registerCompletionItemProvider(glslDocumentSelector, new GLSLCompletionItemProvider()))
     context.subscriptions.push(vscode.languages.registerSignatureHelpProvider(hlslDocumentSelector, new HLSLSignatureHelpProvider(), '(', ','));
+    context.subscriptions.push(vscode.languages.registerSignatureHelpProvider(glslDocumentSelector, new GLSLSignatureHelpProvider(), '(', ','));
     context.subscriptions.push(vscode.languages.registerReferenceProvider(hlslDocumentSelector, new HLSLReferenceProvider()));
 
     let symbolProvider = new HLSLSymbolProvider();
