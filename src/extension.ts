@@ -8,7 +8,7 @@ import * as tmp from 'tmp';
 import { setRgPath, setHlslExtensions } from './common'
 
 import HLSLHoverProvider from './hlsl/hoverProvider';
-import HLSLCompletionItemProvider from './hlsl/completionProvider';
+import HLSLCompletionItemProvider from './hlsl/HLSLCompletionItemProvider';
 import HLSLSignatureHelpProvider from './hlsl/signatureProvider';
 import HLSLSymbolProvider from './hlsl/symbolProvider';
 import HLSLDefinitionProvider from './hlsl/definitionProvider';
