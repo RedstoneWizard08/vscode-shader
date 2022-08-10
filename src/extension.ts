@@ -14,6 +14,7 @@ import HLSLSymbolProvider from './hlsl/symbolProvider';
 import HLSLDefinitionProvider from './hlsl/definitionProvider';
 import HLSLReferenceProvider from './hlsl/referenceProvider';
 import GLSLHoverProvider from './glsl/GLSLHoverProvider';
+import GLSLCompletionItemProvider from './glsl/GLSLCompletionItemProvider';
 
 class HLSLFormatingProvider implements vscode.DocumentFormattingEditProvider, vscode.DocumentRangeFormattingEditProvider {
 
@@ -98,6 +99,7 @@ export async function activate(context: vscode.ExtensionContext) {
     context.subscriptions.push(vscode.languages.registerHoverProvider(hlslDocumentSelector, new HLSLHoverProvider()));
     context.subscriptions.push(vscode.languages.registerHoverProvider(glslDocumentSelector, new GLSLHoverProvider()));
     context.subscriptions.push(vscode.languages.registerCompletionItemProvider(hlslDocumentSelector, new HLSLCompletionItemProvider(), '.'));
+    context.subscriptions.push(vscode.languages.registerCompletionItemProvider(glslDocumentSelector, new GLSLCompletionItemProvider()))
     context.subscriptions.push(vscode.languages.registerSignatureHelpProvider(hlslDocumentSelector, new HLSLSignatureHelpProvider(), '(', ','));
     context.subscriptions.push(vscode.languages.registerReferenceProvider(hlslDocumentSelector, new HLSLReferenceProvider()));
 
