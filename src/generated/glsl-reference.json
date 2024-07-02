@@ -1,5 +1,487 @@
 {
   "functions": {
+    "sampler1D": {
+      "description": "Construct a new sampler1D.",
+      "parameters": []
+    },
+    "bsampler1D": {
+      "description": "Construct a new bsampler1D.",
+      "parameters": []
+    },
+    "isampler1D": {
+      "description": "Construct a new isampler1D.",
+      "parameters": []
+    },
+    "usampler1D": {
+      "description": "Construct a new usampler1D.",
+      "parameters": []
+    },
+    "sampler1DArray": {
+      "description": "Construct a new sampler1DArray.",
+      "parameters": []
+    },
+    "bsampler1DArray": {
+      "description": "Construct a new bsampler1DArray.",
+      "parameters": []
+    },
+    "isampler1DArray": {
+      "description": "Construct a new isampler1DArray.",
+      "parameters": []
+    },
+    "usampler1DArray": {
+      "description": "Construct a new usampler1DArray.",
+      "parameters": []
+    },
+    "vec2": {
+      "description": "Construct a new vec2.",
+      "parameters": [
+        {
+          "label": "x",
+          "documentation": ""
+        },
+        {
+          "label": "y",
+          "documentation": ""
+        }
+      ]
+    },
+    "bvec2": {
+      "description": "Construct a new bvec2.",
+      "parameters": [
+        {
+          "label": "x",
+          "documentation": ""
+        },
+        {
+          "label": "y",
+          "documentation": ""
+        }
+      ]
+    },
+    "ivec2": {
+      "description": "Construct a new ivec2.",
+      "parameters": [
+        {
+          "label": "x",
+          "documentation": ""
+        },
+        {
+          "label": "y",
+          "documentation": ""
+        }
+      ]
+    },
+    "uvec2": {
+      "description": "Construct a new uvec2.",
+      "parameters": [
+        {
+          "label": "x",
+          "documentation": ""
+        },
+        {
+          "label": "y",
+          "documentation": ""
+        }
+      ]
+    },
+    "dvec2": {
+      "description": "Construct a new dvec2.",
+      "parameters": [
+        {
+          "label": "x",
+          "documentation": ""
+        },
+        {
+          "label": "y",
+          "documentation": ""
+        }
+      ]
+    },
+    "mat2": {
+      "description": "Construct a new mat2.",
+      "parameters": [
+        {
+          "label": "x",
+          "documentation": ""
+        },
+        {
+          "label": "y",
+          "documentation": ""
+        }
+      ]
+    },
+    "sampler2D": {
+      "description": "Construct a new sampler2D.",
+      "parameters": []
+    },
+    "bsampler2D": {
+      "description": "Construct a new bsampler2D.",
+      "parameters": []
+    },
+    "isampler2D": {
+      "description": "Construct a new isampler2D.",
+      "parameters": []
+    },
+    "usampler2D": {
+      "description": "Construct a new usampler2D.",
+      "parameters": []
+    },
+    "sampler2DRect": {
+      "description": "Construct a new sampler2DRect.",
+      "parameters": []
+    },
+    "bsampler2DRect": {
+      "description": "Construct a new bsampler2DRect.",
+      "parameters": []
+    },
+    "isampler2DRect": {
+      "description": "Construct a new isampler2DRect.",
+      "parameters": []
+    },
+    "usampler2DRect": {
+      "description": "Construct a new usampler2DRect.",
+      "parameters": []
+    },
+    "sampler2DArray": {
+      "description": "Construct a new sampler2DArray.",
+      "parameters": []
+    },
+    "bsampler2DArray": {
+      "description": "Construct a new bsampler2DArray.",
+      "parameters": []
+    },
+    "isampler2DArray": {
+      "description": "Construct a new isampler2DArray.",
+      "parameters": []
+    },
+    "usampler2DArray": {
+      "description": "Construct a new usampler2DArray.",
+      "parameters": []
+    },
+    "sampler2DMS": {
+      "description": "Construct a new sampler2DMS.",
+      "parameters": []
+    },
+    "bsampler2DMS": {
+      "description": "Construct a new bsampler2DMS.",
+      "parameters": []
+    },
+    "isampler2DMS": {
+      "description": "Construct a new isampler2DMS.",
+      "parameters": []
+    },
+    "usampler2DMS": {
+      "description": "Construct a new usampler2DMS.",
+      "parameters": []
+    },
+    "sampler2DMSArray": {
+      "description": "Construct a new sampler2DMSArray.",
+      "parameters": []
+    },
+    "bsampler2DMSArray": {
+      "description": "Construct a new bsampler2DMSArray.",
+      "parameters": []
+    },
+    "isampler2DMSArray": {
+      "description": "Construct a new isampler2DMSArray.",
+      "parameters": []
+    },
+    "usampler2DMSArray": {
+      "description": "Construct a new usampler2DMSArray.",
+      "parameters": []
+    },
+    "vec3": {
+      "description": "Construct a new vec3.",
+      "parameters": [
+        {
+          "label": "x",
+          "documentation": ""
+        },
+        {
+          "label": "y",
+          "documentation": ""
+        },
+        {
+          "label": "z",
+          "documentation": ""
+        }
+      ]
+    },
+    "bvec3": {
+      "description": "Construct a new bvec3.",
+      "parameters": [
+        {
+          "label": "x",
+          "documentation": ""
+        },
+        {
+          "label": "y",
+          "documentation": ""
+        },
+        {
+          "label": "z",
+          "documentation": ""
+        }
+      ]
+    },
+    "ivec3": {
+      "description": "Construct a new ivec3.",
+      "parameters": [
+        {
+          "label": "x",
+          "documentation": ""
+        },
+        {
+          "label": "y",
+          "documentation": ""
+        },
+        {
+          "label": "z",
+          "documentation": ""
+        }
+      ]
+    },
+    "uvec3": {
+      "description": "Construct a new uvec3.",
+      "parameters": [
+        {
+          "label": "x",
+          "documentation": ""
+        },
+        {
+          "label": "y",
+          "documentation": ""
+        },
+        {
+          "label": "z",
+          "documentation": ""
+        }
+      ]
+    },
+    "dvec3": {
+      "description": "Construct a new dvec3.",
+      "parameters": [
+        {
+          "label": "x",
+          "documentation": ""
+        },
+        {
+          "label": "y",
+          "documentation": ""
+        },
+        {
+          "label": "z",
+          "documentation": ""
+        }
+      ]
+    },
+    "mat3": {
+      "description": "Construct a new mat3.",
+      "parameters": [
+        {
+          "label": "x",
+          "documentation": ""
+        },
+        {
+          "label": "y",
+          "documentation": ""
+        },
+        {
+          "label": "z",
+          "documentation": ""
+        }
+      ]
+    },
+    "sampler3D": {
+      "description": "Construct a new sampler3D.",
+      "parameters": []
+    },
+    "bsampler3D": {
+      "description": "Construct a new bsampler3D.",
+      "parameters": []
+    },
+    "isampler3D": {
+      "description": "Construct a new isampler3D.",
+      "parameters": []
+    },
+    "usampler3D": {
+      "description": "Construct a new usampler3D.",
+      "parameters": []
+    },
+    "vec4": {
+      "description": "Construct a new vec4.",
+      "parameters": [
+        {
+          "label": "x",
+          "documentation": ""
+        },
+        {
+          "label": "y",
+          "documentation": ""
+        },
+        {
+          "label": "z",
+          "documentation": ""
+        },
+        {
+          "label": "w",
+          "documentation": ""
+        }
+      ]
+    },
+    "bvec4": {
+      "description": "Construct a new bvec4.",
+      "parameters": [
+        {
+          "label": "x",
+          "documentation": ""
+        },
+        {
+          "label": "y",
+          "documentation": ""
+        },
+        {
+          "label": "z",
+          "documentation": ""
+        },
+        {
+          "label": "w",
+          "documentation": ""
+        }
+      ]
+    },
+    "ivec4": {
+      "description": "Construct a new ivec4.",
+      "parameters": [
+        {
+          "label": "x",
+          "documentation": ""
+        },
+        {
+          "label": "y",
+          "documentation": ""
+        },
+        {
+          "label": "z",
+          "documentation": ""
+        },
+        {
+          "label": "w",
+          "documentation": ""
+        }
+      ]
+    },
+    "uvec4": {
+      "description": "Construct a new uvec4.",
+      "parameters": [
+        {
+          "label": "x",
+          "documentation": ""
+        },
+        {
+          "label": "y",
+          "documentation": ""
+        },
+        {
+          "label": "z",
+          "documentation": ""
+        },
+        {
+          "label": "w",
+          "documentation": ""
+        }
+      ]
+    },
+    "dvec4": {
+      "description": "Construct a new dvec4.",
+      "parameters": [
+        {
+          "label": "x",
+          "documentation": ""
+        },
+        {
+          "label": "y",
+          "documentation": ""
+        },
+        {
+          "label": "z",
+          "documentation": ""
+        },
+        {
+          "label": "w",
+          "documentation": ""
+        }
+      ]
+    },
+    "mat4": {
+      "description": "Construct a new mat4.",
+      "parameters": [
+        {
+          "label": "x",
+          "documentation": ""
+        },
+        {
+          "label": "y",
+          "documentation": ""
+        },
+        {
+          "label": "z",
+          "documentation": ""
+        },
+        {
+          "label": "w",
+          "documentation": ""
+        }
+      ]
+    },
+    "samplerCube": {
+      "description": "Construct a new samplerCube.",
+      "parameters": []
+    },
+    "bsamplerCube": {
+      "description": "Construct a new bsamplerCube.",
+      "parameters": []
+    },
+    "isamplerCube": {
+      "description": "Construct a new isamplerCube.",
+      "parameters": []
+    },
+    "usamplerCube": {
+      "description": "Construct a new usamplerCube.",
+      "parameters": []
+    },
+    "samplerCubeArray": {
+      "description": "Construct a new samplerCubeArray.",
+      "parameters": []
+    },
+    "bsamplerCubeArray": {
+      "description": "Construct a new bsamplerCubeArray.",
+      "parameters": []
+    },
+    "isamplerCubeArray": {
+      "description": "Construct a new isamplerCubeArray.",
+      "parameters": []
+    },
+    "usamplerCubeArray": {
+      "description": "Construct a new usamplerCubeArray.",
+      "parameters": []
+    },
+    "samplerBuffer": {
+      "description": "Construct a new samplerBuffer.",
+      "parameters": []
+    },
+    "bsamplerBuffer": {
+      "description": "Construct a new bsamplerBuffer.",
+      "parameters": []
+    },
+    "isamplerBuffer": {
+      "description": "Construct a new isamplerBuffer.",
+      "parameters": []
+    },
+    "usamplerBuffer": {
+      "description": "Construct a new usamplerBuffer.",
+      "parameters": []
+    },
     "abs": {
       "description": "return the absolute value of the parameter",
       "parameters": [

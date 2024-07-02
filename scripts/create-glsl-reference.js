@@ -33,7 +33,86 @@ const getParameters = (parameters) => {
     }
 }
 
+// Key is type, value is prefix
+const prefixTypes = {
+    float: "",
+    bool: "b",
+    int: "i",
+    uint: "u",
+    double: "d",
+};
+
+const numTypes = {
+    float: "",
+    bool: "b",
+    int: "i",
+    uint: "u",
+};
+
+const vecs = (deg) => {
+    const tmp = {};
+    tmp[`vec${deg}`] = "";
+    return tmp;
+};
+
+// Key is suffix
+const func = {
+    4: [
+        // 1st is prefix, 2nd is extra suffix, 3rd are args, 4th is types
+        ["vec", "", ["x", "y", "z", "w"], prefixTypes],
+        ["mat", "", ["x", "y", "z", "w"], vecs(4)],
+    ],
+
+    3: [
+        ["vec", "", ["x", "y", "z"], prefixTypes],
+        ["mat", "", ["x", "y", "z"], vecs(3)],
+        ["sampler", "D", [], numTypes],
+    ],
+
+    2: [
+        ["vec", "", ["x", "y"], prefixTypes],
+        ["mat", "", ["x", "y"], vecs(2)],
+        ["sampler", "D", [], numTypes],
+        ["sampler", "DRect", [], numTypes],
+        ["sampler", "DArray", [], numTypes],
+        ["sampler", "DMS", [], numTypes],
+        ["sampler", "DMSArray", [], numTypes],
+    ],
+
+    1: [
+        ["sampler", "D", [], numTypes],
+        ["sampler", "DArray", [], numTypes],
+    ],
+
+    Cube: [
+        ["sampler", "", [], numTypes],
+        ["sampler", "Array", [], numTypes],
+    ],
+
+    Buffer: [["sampler", "", [], numTypes]],
+};
+
 const functions = {};
+
+for (const k of Object.keys(func)) {
+    for (const item of func[k]) {
+        const pre = item[0];
+        const suf = item[1];
+        const arg = item[2].map((v) => ({ label: v, documentation: "" }));
+        const typ = item[3];
+
+        for (const ty of Object.keys(typ)) {
+            const tyn = typ[ty];
+            const name = `${tyn}${pre}${k}${suf}`;
+
+            functions[name] = {
+                description: `Construct a new ${name}.`,
+                parameters: arg,
+            };
+        }
+    }
+}
+
 fs
     .readdirSync(refpagesPath)
     .filter((fileName) => fileName.endsWith(".xml"))
