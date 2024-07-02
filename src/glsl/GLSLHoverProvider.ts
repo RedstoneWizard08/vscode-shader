@@ -65,7 +65,7 @@ export default class GLSLHoverProvider extends ShaderHoverProvider {
         var entry = glslReference.functions[name]
         if (entry && entry.description) {
             const signature = `(*function*) **${name}**(${entry.parameters.map(p => p.label).join(',')})`;
-            let contents: MarkedString[] = [];
+            let contents: (MarkedString | MarkdownString)[] = [];
             contents.push(new MarkdownString(signature));
             const parameters = entry.parameters.map(p => `*@param* \`${p.label}\` — ${p.documentation}`).join('\n\n')
             contents.push(new MarkdownString(entry.description).appendMarkdown('\n\n' + parameters));
@@ -77,7 +77,7 @@ export default class GLSLHoverProvider extends ShaderHoverProvider {
 
         for (let s of symbols) {
             if (s.name === name) {
-                let contents: MarkedString[] = [];
+                let contents: (MarkedString | MarkdownString)[] = [];
                 let signature = '(*' + SymbolKind[s.kind].toLowerCase() + '*) ';
                 signature += s.containerName ? s.containerName + '.' : '';
                 signature += '**' + name + '**';

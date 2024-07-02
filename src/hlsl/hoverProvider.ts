@@ -52,7 +52,7 @@ export default class HLSLHoverProvider extends ShaderHoverProvider {
             if (entry && entry.description) {
                 let signature = '(*preprocessor*) ';
                 signature += '**#' + name + '**';
-                let contents: MarkedString[] = [];
+                let contents: (MarkedString | MarkdownString)[] = [];
                 contents.push(new MarkdownString(signature));
                 contents.push(textToMarkedString(entry.description));
                 contents.push(linkToMarkdownString(entry.link, this.openLinkCommand, this.language));
@@ -71,7 +71,7 @@ export default class HLSLHoverProvider extends ShaderHoverProvider {
                 signature += params.slice(0, -1);
             }
             signature += ')';
-            let contents: MarkedString[] = [];
+            let contents: (MarkedString | MarkdownString)[] = [];
             contents.push(new MarkdownString(signature));
             contents.push(textToMarkedString(entry.description));
             contents.push(linkToMarkdownString(entry.link, this.openLinkCommand, this.language));
@@ -82,7 +82,7 @@ export default class HLSLHoverProvider extends ShaderHoverProvider {
         if (entry && entry.description) {
             let signature = '(*datatype*) ';
             signature += '**' + name + '**';
-            let contents: MarkedString[] = [];
+            let contents: (MarkedString | MarkdownString)[] = [];
             contents.push(new MarkdownString(signature));
             contents.push(textToMarkedString(entry.description));
             contents.push(linkToMarkdownString(entry.link, this.openLinkCommand, this.language));
@@ -93,7 +93,7 @@ export default class HLSLHoverProvider extends ShaderHoverProvider {
         if (entry && entry.description) {
             let signature = '(*semantic*) ';
             signature += '**' + name + '**';
-            let contents: MarkedString[] = [];
+            let contents: (MarkedString | MarkdownString)[] = [];
             contents.push(new MarkdownString(signature));
             contents.push(textToMarkedString(entry.description));
             contents.push(linkToMarkdownString(entry.link, this.openLinkCommand, this.language));
@@ -105,7 +105,7 @@ export default class HLSLHoverProvider extends ShaderHoverProvider {
         if (entry && entry.description) {
             let signature = '(*semantic*) ';
             signature += '**' + name + '**';
-            let contents: MarkedString[] = [];
+            let contents: (MarkedString | MarkdownString)[] = [];
             contents.push(new MarkdownString(signature));
             contents.push(textToMarkedString(entry.description));
             contents.push(linkToMarkdownString(entry.link, this.openLinkCommand, this.language));
@@ -116,7 +116,7 @@ export default class HLSLHoverProvider extends ShaderHoverProvider {
         if (entry) {
             let signature = '(*keyword*) ';
             signature += '**' + name + '**';
-            let contents: MarkedString[] = [];
+            let contents: (MarkedString | MarkdownString)[] = [];
             contents.push(new MarkdownString(signature));
             contents.push(textToMarkedString(entry.description));
             contents.push(linkToMarkdownString(entry.link, this.openLinkCommand, this.language));
@@ -127,7 +127,7 @@ export default class HLSLHoverProvider extends ShaderHoverProvider {
 
         for (let s of symbols) {
             if (s.name === name) {
-                let contents: MarkedString[] = [];
+                let contents: (MarkedString | MarkdownString)[] = [];
                 let signature = '(*' + SymbolKind[s.kind].toLowerCase() + '*) ';
                 signature += s.containerName ? s.containerName + '.' : '';
                 signature += '**' + name + '**';
