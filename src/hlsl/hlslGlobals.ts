@@ -1,13 +1,4 @@
-import { ParameterInformation } from 'vscode';
-
-export class IEntry { 
-    description?: string;
-    parameters?: ParameterInformation[];
-    link?: string;
- }
-
- //TODO: support multiple entry per name
-export interface IEntries { [name: string]: IEntry; }
+import { IEntries } from '../IEntry';
 
 // From https://docs.microsoft.com/en-ca/windows/win32/direct3dhlsl/dx-graphics-hlsl-intrinsic-functions
 

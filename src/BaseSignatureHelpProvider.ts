@@ -1,7 +1,7 @@
 'use strict';
 
 import { SignatureHelpProvider, SignatureHelp, SignatureInformation, ParameterInformation, CancellationToken, TextDocument, Position, workspace } from 'vscode';
-import hlslGlobals = require('./hlslGlobals');
+import { IEntries } from './IEntry';
 
 const _NL = '\n'.charCodeAt(0);
 const _TAB = '\t'.charCodeAt(0);
@@ -60,7 +60,9 @@ class BackwardIterator {
 
 }
 
-export default class HLSLSignatureHelperProvider implements SignatureHelpProvider {
+export default abstract class BaseSignatureHelpProvider implements SignatureHelpProvider {
+
+    abstract getFunctionEntries(): IEntries;
 
     public provideSignatureHelp(document: TextDocument, position: Position, token: CancellationToken): Promise<SignatureHelp> {
 
@@ -81,7 +83,7 @@ export default class HLSLSignatureHelperProvider implements SignatureHelpProvide
             return null;
         }
 
-        let entry = hlslGlobals.intrinsicfunctions[ident];
+        let entry = this.getFunctionEntries()[ident];
         if (!entry) {
             return null;
         }
